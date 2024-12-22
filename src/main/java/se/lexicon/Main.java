@@ -1,9 +1,6 @@
 package se.lexicon;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+
 import java.util.Scanner;
 
 public class Main {
@@ -13,14 +10,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         /*
-         *  Write a Java program to print 'Hello' on screen and then print your name on
+         * 1. Write a Java program to print 'Hello' on screen and then print your name on
          * a separate line.
          */
         System.out.println("Hello \nJean-Pierre!");
         System.out.println("-------------------------------------------------------------------------");
 
         /*
-         *  Create a program that takes a year as input from user and print if it’s leap
+         * 2. Create a program that takes a year as input from user and print if it’s leap
          * year or not.
          */
         System.out.println("Please enter a year: ");
@@ -30,22 +27,17 @@ public class Main {
             System.out.println(year + " is a leap year");
         } else if (year % 4 == 0 && year % 100 == 0) {
             if (year % 400 == 0) {
-
                 System.out.println(year + " is a leap year");
-
             } else {
                 System.out.println(year + " is not a leap year");
             }
-
         } else {
             System.out.println(year + " is not a leap year");
         }
-
-
         System.out.println("-------------------------------------------------------------------------");
 
         /*
-         * Write a Java program to print the sum/multiplication/division and
+         * 3.Write a Java program to print the sum/multiplication/division and
          * subtraction of two numbers
          * Expected result:
          * 45 + 11 = 56
@@ -79,7 +71,7 @@ public class Main {
         System.out.println("-------------------------------------------------------------------------");
 
         /*
-         * Write a Java program that prints the average of three numbers
+         * 4.Write a Java program that prints the average of three numbers
          * Expected result:
          * (23 + 11 + 77) / 3 = 37
          */
@@ -92,18 +84,18 @@ public class Main {
 
 
         /*
-         * Create a program that asks user to input his/her name and store it in a
+         * 5.Create a program that asks user to input his/her name and store it in a
          * variable instead of having fixed name. Then print ‘Hello username’ where
          * username is what you got from user as input.
          */
         System.out.println("Please enter your username: ");
-        String username = scanner.nextLine();
-        System.out.println("\'Hello " + username + "\'");
+        String username = scanner.next();
+        System.out.println("Hello " + username );
         System.out.println("-------------------------------------------------------------------------");
 
 
         /*
-         * Create a program that asks user to input two numbers and print the
+         * 6.Create a program that asks user to input two numbers and print the
          * sum/multiplication/division and subtraction of given numbers
          */
         System.out.println("Please enter your first number: ");
@@ -122,7 +114,7 @@ public class Main {
 
 
         /*
-         * Create a program that converts seconds to hours, minutes and seconds
+         * 7.Create a program that converts seconds to hours, minutes and seconds
          * Input seconds: 86399
          * Expected output:
          * 23:59:59
@@ -133,12 +125,12 @@ public class Main {
         int hours = seconds / 3600;
         int minutes = (seconds % 3600) / 60;
         int seconds2 = seconds % 60;
-        System.out.println(String.format("%02d:%02d:%02d", hours, minutes, seconds2));
-        ;
+        System.out.printf("%02d:%02d:%02d%n", hours, minutes, seconds2);
+
         System.out.println("-------------------------------------------------------------------------");
 
         /*
-         * Write a program that first generates a random number between 1 and 500
+         * 8.Write a program that first generates a random number between 1 and 500
          * and stores it into a variable (see the Random class). Then let the user make a
          * guess for which number it is. If the user types the correct number, he should be
          * presented with a message (including the number of guesses he has made). If he
